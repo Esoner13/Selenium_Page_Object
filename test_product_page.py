@@ -82,9 +82,9 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
 
 
 @pytest.mark.need_review
-def test_guest_can_add_product_to_basket(browser, link):
-    links = "https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/"
-    page = ProductPage(browser, links)
+def test_guest_can_add_product_to_basket(browser):
+    link = "https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
     page.open()
     page.add_to_basket()
     page.solve_quiz_and_get_code()
